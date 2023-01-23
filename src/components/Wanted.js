@@ -128,9 +128,9 @@ class Ninjas extends Component {
                         SHOW!
                     </button>
 
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" value={this.state.id} onChange={this.handleChange} />
-                        <input type="submit" value="find executor" />
+                    <form className="FormStyle" onSubmit={this.handleSubmit}>
+                        <input className="TextField" type="text" value={this.state.id} onChange={this.handleChange} />
+                        <input className="TextSubmit" type="submit" value="find executor" />
                     </form>
 
                     <button className="ButtonStyle" onClick={this.deleteTable}>
