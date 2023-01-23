@@ -1,12 +1,19 @@
 import React from 'react'
-import Handler from './components/Handler';
+import Ninjas from './components/Ninjas';
 
 function App() {
-    return(
-        <div>
-            <Handler />
+    return (
+        <body>
+        <header className="MainHeader">
+            <h1>Этап 4</h1>
+        </header>
+        <div className="Sidebar">
+            <a>jopa</a>
         </div>
-    );
-}
-
-export default App
+        <div className="Pole">
+            <Ninjas/>
+        </div>
+        </body>
+    )
+        }
+        export default App;

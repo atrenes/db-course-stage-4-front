@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table"
 
-class Handler extends Component {
+class Ninjas extends Component {
     state = {
         ninjas: []
     }
@@ -48,21 +48,19 @@ class Handler extends Component {
             )
         });
         return (
-            <header className="masthead text-center">
-                <div>
-                    <button onClick={this.showNinjas}>
-                        SHOW!
-                    </button>
-                    <button onClick={this.deleteTable}>
-                        DELETE!
-                    </button>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-9 mx-auto">
-                            <h1 className="ninja-heading">ninjas</h1>
-                        </div>
-                        <Table striped bordered hover>
+            <div className="Pole">
+                    <div className="TopBar">
+
+                            <button className="ButtonStyle" onClick={this.showNinjas}>
+                                SHOW!
+                            </button>
+
+                            <button className="ButtonStyle" onClick={this.deleteTable}>
+                                CLEAR!
+                            </button>
+
+                    </div>
+                        <Table className="Table">
                             <thead>
                             <tr>
                                 <th>ID</th>
@@ -81,11 +79,9 @@ class Handler extends Component {
                             {ninjas}
                             </tbody>
                         </Table>
-                    </div>
-                </div>
-            </header>
+           </div>
         )
     }
 }
 
-export default Handler
+export default Ninjas
