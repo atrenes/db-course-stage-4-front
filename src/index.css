@@ -1,0 +1,70 @@
+
+body{
+    font-family: sans-serif;
+    background-color: #f5ebe0;
+    padding: 0;
+    margin: 0;
+
+}
+.MainHeader > *{
+    background-color: #d5bdaf;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+
+}
+h1{
+
+    color: #333533;
+    font-size: 200%;
+    text-align: center;
+    vertical-align: bottom;
+}
+.Sidebar{
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    background: #d6ccc2;
+    padding-top: 20px;
+}
+.Pole{
+    margin-left: 100px;
+}
+.TopBar{
+    padding: 10px 0 10px 0;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    float: left;
+}
+.ButtonStyle{
+    font-family: sans-serif;
+    background-color: #c38e70;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.ButtonStyle:hover{
+    background-color: #a0745c;
+}
+
+th, td {
+    font-family: sans-serif;
+    padding: 5px 15px 5px 15px;
+    text-align: left;
+    border-bottom: 1px solid gray;
+}
+.Table{
+    border-collapse: collapse;
+    width: 95%;
+}
