@@ -1,5 +1,6 @@
 import React from 'react'
 import Ninjas from './components/Ninjas';
+import Wanted from "./components/Wanted";
 
 function App() {
     return (
@@ -11,7 +12,8 @@ function App() {
             <a>jopa</a>
         </div>
         <div className="Pole">
-            <Ninjas/>
+            {/*<Ninjas/>*/}
+            <Wanted/>
         </div>
         </body>
     )
