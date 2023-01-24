@@ -6,19 +6,30 @@ class Ninjas extends Component {
     state = {
         wanted: [],
         executors: [],
-        id: 0
+        id: 0,
+        setDescription: {
+            id: 0,
+            description: ""
+        }
     }
     constructor(props) {
         super(props)
         this.state = {
             wanted: [],
             executors: [],
-            id: 0
+            id: 0,
+            setDescription: {
+                id: 0,
+                description: ""
+            }
         }
         this.showWanted = this.showWanted.bind(this)
         this.deleteTable = this.deleteTable.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this)
+        this.getExecutorsForId = this.getExecutorsForId.bind(this)
+        this.handleIdChange = this.handleIdChange.bind(this)
+        this.handleDescriptionIdChange = this.handleDescriptionIdChange.bind(this)
+        this.handleDescriptionTextChange = this.handleDescriptionTextChange.bind(this)
+        this.addDescription = this.addDescription.bind(this)
     }
 
     showWanted() {
@@ -31,7 +42,7 @@ class Ninjas extends Component {
             });
     }
 
-    handleSubmit(event) {
+    getExecutorsForId(event) {
         let url = 'http://localhost:3000/executors_for/' + this.state.id
         axios.get(url)
             .then((response) => {
@@ -43,8 +54,26 @@ class Ninjas extends Component {
         event.preventDefault()
     }
 
-    handleChange(event) {
+    handleIdChange(event) {
         this.setState({id: event.target.value});
+    }
+
+    handleDescriptionIdChange(event) {
+        this.setState({setDescription: {id: event.target.value, description: this.state.setDescription.description}});
+    }
+
+    handleDescriptionTextChange(event) {
+        this.setState({setDescription: {id: this.state.setDescription.id, description: event.target.value}});
+    }
+
+    addDescription(event) {
+        let url = 'http://localhost:3000/wanted/addDescription'
+        axios.post(url, this.state.setDescription)
+            .then((response) => {
+                console.log(response.data)
+                this.showWanted()
+            });
+        event.preventDefault()
     }
 
     deleteTable() {
@@ -128,9 +157,15 @@ class Ninjas extends Component {
                         SHOW!
                     </button>
 
-                    <form className="FormStyle" onSubmit={this.handleSubmit}>
-                        <input className="TextField" type="text" value={this.state.id} onChange={this.handleChange} />
+                    <form className="FormStyle" onSubmit={this.getExecutorsForId}>
+                        <input className="TextField" type="text" value={this.state.id} onChange={this.handleIdChange} />
                         <input className="TextSubmit" type="submit" value="find executor" />
+                    </form>
+
+                    <form className="FormStyle" onSubmit={this.addDescription}>
+                        <input className="TextField" type="text" value={this.state.setDescription.id} onChange={this.handleDescriptionIdChange}/>
+                        <input className="TextField" type="text" value={this.state.setDescription.description} onChange={this.handleDescriptionTextChange}/>
+                        <input className="TextSubmit" type="submit" value="set description"/>
                     </form>
 
                     <button className="ButtonStyle" onClick={this.deleteTable}>

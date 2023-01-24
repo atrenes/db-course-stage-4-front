@@ -91,13 +91,13 @@ class Ninjas extends Component {
                         <th>ID</th>
                         <th>Name</th>
                         <th>Clan</th>
-                        <th>eye</th>
-                        <th>rank</th>
-                        <th>chakraAmount</th>
-                        <th>criminalNum</th>
-                        <th>criminalGroup</th>
-                        <th>isCriminal</th>
-                        <th>village</th>
+                        <th>Eyes</th>
+                        <th>Rank</th>
+                        <th>Chakra</th>
+                        <th>Crimes committed</th>
+                        <th>Criminal Group</th>
+                        <th>Criminal</th>
+                        <th>Village</th>
                     </tr>
                     </thead>
                     <tbody>
