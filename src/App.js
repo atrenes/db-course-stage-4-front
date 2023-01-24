@@ -5,6 +5,7 @@ import Ninjas from './components/Ninjas';
 import Wanted from "./components/Wanted";
 import {Navbar} from "./components/Navbar";
 import {Route, BrowserRouter, Routes} from "react-router-dom";
+import Techniques from "./components/Techniques";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
             <Routes>
                 <Route path={'/ninjas'} element={<Ninjas/>}/>
                 <Route path={'/wanted'} element={<Wanted/>}/>
+                <Route path={'/techniques'} element={<Techniques/>}/>
             </Routes>
         </div>
         </body>

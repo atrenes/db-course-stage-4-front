@@ -5,6 +5,7 @@ export const Navbar = () => {
         <div>
             <NavLink className="SideLink" to="/ninjas">Ninjas</NavLink>
             <NavLink className="SideLink" to="/wanted">Wanted</NavLink>
+            <NavLink className="SideLink" to="/techniques">Techniques</NavLink>
         </div>
     )
 }
