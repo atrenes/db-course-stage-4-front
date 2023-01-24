@@ -9,7 +9,6 @@ function App() {
     return (
         <BrowserRouter>
         <body>
-
         <header className="MainHeader">
             <h1>Этап 4</h1>
         </header>

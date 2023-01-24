@@ -3,14 +3,8 @@ import {NavLink} from "react-router-dom";
 export const Navbar = () => {
     return(
         <div>
-            <ul>
-                <li>
-                    <NavLink to="/ninjas">Ninjas</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/wanted">Wanted</NavLink>
-                </li>
-            </ul>
+            <NavLink className="SideLink" to="/ninjas">Ninjas</NavLink>
+            <NavLink className="SideLink" to="/wanted">Wanted</NavLink>
         </div>
     )
 }
