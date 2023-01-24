@@ -11,6 +11,12 @@ body{
     width: 100%;
     height: 100px;
 }
+.Duck{
+    position: absolute;
+    top: 10px;
+    height: 80px;
+    left: 20px;
+}
 h1{
     padding-top: 30px;
     margin: 0;

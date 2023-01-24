@@ -1,5 +1,6 @@
 
 import React from 'react'
+import duck from './img/seduck.png';
 import Ninjas from './components/Ninjas';
 import Wanted from "./components/Wanted";
 import {Navbar} from "./components/Navbar";
@@ -10,6 +11,7 @@ function App() {
         <BrowserRouter>
         <body>
         <header className="MainHeader">
+            <img className="Duck" src={duck}/>
             <h1>Этап 4</h1>
         </header>
         <div className="Sidebar">
